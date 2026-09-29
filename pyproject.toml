@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sms-segments"
+version = "0.1.0"
+description = "SMS length, encoding and cost calculator: GSM 03.38 vs UCS-2, segment counts, safe replacements and template lint."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Marvin Palencia" }]
+keywords = ["sms", "gsm-7", "ucs-2", "segments", "cost"]
+dependencies = []
+
+[project.scripts]
+sms-segments = "sms_segments.cli:main"
+
+[tool.setuptools]
+packages = ["sms_segments"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

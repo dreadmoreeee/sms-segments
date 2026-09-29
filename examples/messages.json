@@ -1,0 +1,7 @@
+[
+  {"lang": "fr", "type": "reminder", "text": "Bonjour Camille, rappel : rendez-vous demain \u00e0 14\u202fh. R\u00e9pondez STOP pour ne plus recevoir."},
+  {"lang": "en", "type": "reminder", "text": "Hi Sam, it\u2019s a reminder: your visit is tomorrow at 2:30 PM \u2013 see you at Example Studio \u2026"},
+  {"lang": "es", "type": "reminder", "text": "Hola Luc\u00eda, su cita est\u00e1 confirmada para ma\u00f1ana a las 14:30. Gracias."},
+  {"lang": "en", "type": "promo", "text": "Spring offer: 20% off until May 31 \u2192 https://example.com/offer"},
+  {"lang": "en", "type": "plain", "text": "Booked: haircut on Fri Oct 3, 2:30 PM. Manage: https://example.com/r/x7Kp2 Reply STOP to opt out."}
+]

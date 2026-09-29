@@ -1,0 +1,4 @@
+[
+  {"lang": "en", "type": "reminder", "text": "{shop}: Hi {name}, reminder: {service} on {date}. Manage: https://example.com/r/{code} Reply STOP to opt out."},
+  {"lang": "fr", "type": "reminder", "text": "{{shop}} : Bonjour {{name}}, rappel : {{service}} le {{date}}. G\u00e9rer : https://example.com/r/{{code}}"}
+]

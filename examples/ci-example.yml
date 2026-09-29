@@ -1,0 +1,22 @@
+# Example CI job (GitHub Actions syntax). Copy it to .github/workflows/ in
+# YOUR repository if you want to fail a build when an SMS template grows past
+# two segments or when a sample message picks up a character that forces UCS-2.
+name: sms-length
+on: [push, pull_request]
+
+jobs:
+  sms-length:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install sms-segments
+      - name: Templates stay within 2 segments, even with accented names
+        run: >
+          sms-segments lint --json sms/templates.json
+          --max name=20 --max service=30 --max shop=25 --max date=20 --max code=8
+          --ucs2-placeholders name --max-segments 2
+      - name: Sample messages stay within 1 segment
+        run: sms-segments analyze --json sms/samples.json --max-segments 1 --format json
